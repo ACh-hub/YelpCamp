@@ -17,9 +17,12 @@ const commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect(process.env.DATABASEURL, {
-    useNewUrlParser: true
-});
+const url = process.env.DATABASEURL || "mongodb://127.0.0.1:27017/shell?gssapiServiceName=mongodb";
+
+mongoose.connect(url,
+    {
+     useNewUrlParser: true
+ });
 
 app.set("view engine", "ejs");
 
