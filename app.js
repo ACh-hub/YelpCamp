@@ -21,10 +21,6 @@ mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true
 });
 
-// mongoose.connect("mongodb://yelpcamp:yelpcamp1@ds145184.mlab.com:45184/yelp_camp_alex_ch", {
-//     useNewUrlParser: true
-// });
-
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({
